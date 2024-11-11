@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En nuestro hotel los monstruos se lo pasan de miedo">
+    <meta name="keywords" content="hotel, spa, monstuos, horror, sustos, sangre">
+
+    <!-- Meta tags para "meta" facebook, instagram, watssap -->
+    <meta property="og:url" content="http://hoteltr.com/oferta.html" />
+    <meta property="og:type" content="oferta" />
+    <meta property="og:title" content="Ofertas para montruos seniles" />
+    <meta property="og:description" content="la mejores ofertas para..." />
+    <meta property="og:image"
+        content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+
+    <title>Hotel Tansilvania | Bienveni@s</title>
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Reset mínimo */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7rem;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a{
+            color: #333;
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3{
+            padding-bottom: 20px;
+        }
+
+        p{
+            margin: 10px;
+            
+
+        }
+
+        /* utilidades */
+        .container{
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .text-primary{
+            color: #f7c08a;
+        }
+
+        .btn{
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .btn:hover{
+            background-color: #f7c08a;
+            color: #333;
+        }
+
+        /* colores para reutilizar */
+        .bg-dark{
+            background-color: #333;
+            color: #fff;
+        }
+
+        .bg-light{
+            background-color: #fff;
+            color: #333;
+        }
+
+        .bg-primary{
+            background-color: #f88844;
+            color: #333;
+        }
+
+        .bg-secondary{
+            background-color: #ffb88c;
+            color: #333;
+        }
+
+        /* paddings para reutilizar */
+        .pd-1{
+            padding: 30px 0;
+        }
+
+        .pd-2{
+            padding: 20px;
+        }
+
+        .pd-3 {
+            padding: 30px;
+        }
+
+        /* Navbar */
+        #top-menu{
+            background-color: #333;
+            color: #fff;
+        }
+
+        #top-menu a{
+            color: #fff;
+        }
+
+        #top-menu h1{
+            margin-left: 10px;
+        }
+
+        #top-menu .top-menu-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #top-menu .top-menu-container ul{
+            list-style: none;
+            display: flex;
+            gap: 10px;
+        }
+
+        #top-menu .top-menu-container ul a{
+            display: inline-block;
+            padding: 20px;
+        }
+
+        #top-menu .top-menu-container ul a:hover{
+            background-color: #444;
+            color: #f88844;
+        }
+
+        #top-menu .top-menu-container ul a.active{
+            border-bottom: 4px solid #f88844;
+        }
+
+        /* Showcase */
+        #showcase{
+            height: 30vh;
+            background: url("img/showcase.jpg") no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+
+        }
+
+        #showcase .showcase-container{
+            text-align: center;
+        }
+
+        #showcase .showcase-container h2{
+            font-size: 2em;
+        }
+
+        #showcase .showcase-container p{
+            font-size: 1.5em;
+            padding: 0 20px;
+        }
+        /* section info */
+        #info{
+            display: flex;
+            min-height: 30vh;
+        }
+        #info .info-img{
+            background: url(./img/photo-1.jpg) no-repeat center center/cover;
+            /* flex-grow: 1; */
+            /* flex-shrink: 1; */
+            /* flex-basis: auto; */
+            flex: 1 1 auto;
+        }
+        #info .info-content{
+            background-color: #333;
+            color: #fff;
+             /* flex-shrink: 1; */
+            /* flex-basis: 0; */
+            /* flex-grow: 0; */
+            flex: 1 0 0%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        /* section featur */
+        #features {
+            display: flex;
+        }
+        #features .box{
+            padding: 30px;
+            text-align: center;
+        }
+        #features .box i{
+            font-size: 5rem;
+            margin-bottom: 1 rem;
+        }
+        #main-footer{
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        } 
+        /* estilo mobil */
+        @media screen and (max-with:768px) {
+            #showcase{
+                height: 100vh;
+            
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="hamburguer-menu">
+            <div class="container top-menu-container">
+                <h1><a href="index.html">TVN Hotels</a></h1>
+                <ul>
+                    <li><a class="active" href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Conócenos</a></li>
+                    <li><a href="contact.html">Contanto</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="top-menu">
+            <div class="container top-menu-container">
+                <h1><a href="index.html">TVN Hotels</a></h1>
+                <ul>
+                    <li><a class="active" href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Conócenos</a></li>
+                    <li><a href="contact.html">Contanto</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="showcase">
+            <div class="container showcase-container">
+                <h2 > <strong class="text-primary">Disfrute</strong> su estancia</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet atque explicabo repellendus
+                    obcaecati deserunt aperiam tempora sit dolores. Fuga, sit quibusdam. Dolorem voluptatibus
+                    inventore quas perspiciatis itaque laborum omnis officiis?</p>
+                <a class="btn" href="about.html">Conócenos</a>
+            </div>
+        </div>
+    </header>
+    <section id="info">
+        <div class="info-img"></div>
+        <div class="info-content">
+            <h2> <strong class="text-primary">Confort</strong> Nuestro Lima</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim dolores obcaecati omnis. Enim reprehenderit dignissimos accusantium nobis ullam quae dolorem corrupti totam architecto veniam! Earum dignissimos adipisci ducimus obcaecati ipsum!</p>
+            <a class="btn bg-light" href="#">visita SPA</a>
+        </div>
+
+    </section>
+    
+    <section id="features">
+        <div class="box bg-light ">
+            <i class="fa-solid fa-hotel"></i>
+            <h3>Buena localizacion</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A mollitia voluptatibus consectetur repellat quasi.</p>
+        </div>
+        <div class="box bg-primary  ">
+            <i class="fa-solid fa-utensils"></i>
+            <h3>comida gratis</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos aliquid alias facilis fuga, commodi error .</p>
+        </div>
+        <div class="box bg-light">
+            <i class="fa-solid fa-dumbbell"></i>
+            <h3>Gmnasio&SPA</h3>
+            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus possimus ab esse maxime, veniam dolores quibusdam .</P>
+        </div>
+    </section>
+
+    <footer id="main-footer">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque </p>
+</footer>
+</body>
+
+</html>
